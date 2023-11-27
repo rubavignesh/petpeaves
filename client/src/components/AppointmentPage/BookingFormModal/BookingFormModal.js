@@ -1,7 +1,7 @@
 import { Backdrop, Button, Fade, makeStyles, Modal } from '@material-ui/core';
 import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 const BookingFormModal = ({ openModal, handleModalClose, selectedDepartment, visitngHour, selectedDate }) => {
     const classes = useStyles();
 
-    const history = useHistory();
+    // const history = useHistory();
 
     const { setAppointment } = useContext(UserContext);
 
@@ -49,7 +49,7 @@ const BookingFormModal = ({ openModal, handleModalClose, selectedDepartment, vis
                 setAppointment(updatedFromData);
                 handleModalClose();
                 alert('Appoinment created successfully');
-                history.push('/dashboard/appointments');
+                // history.push('/dashboard/appointments');
             }
         })
     }

@@ -4,13 +4,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import bannerImg from '../../../images/happy-dog1.webp'
 import Grid from '@material-ui/core/Grid';
 import { Button, Container } from '@material-ui/core';
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import 'react-calendar/dist/Calendar.css';
 import BusinessInfoCard from '../BusinessInfoCard/BusinessInfoCard';
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        
+
     },
     bannerArea: {
         marginBottom: '10rem',
@@ -20,11 +24,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Banner = ({ selectedDate, handleAppointmentDate }) => {
     const classes = useStyles();
-    // const history = useHistory();
+    const history = useNavigate();
     const path = useLocation().pathname;
 
     const handleAppointmentBtn = () => {
-        // history.push('/appointment')
+        history('/appointment')
     }
 
     return (

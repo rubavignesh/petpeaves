@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div className="full-bg">
             <Container style={{ margin: '0 auto', padding: '5rem' }}>
-                <FooterTop />
+                <FooterTop style={{color:"pink"}}/>
                 <div style={{ textAlign: 'center', marginTop: '5rem' }}>
                     Copyright {new Date().getFullYear()}. Developed by <a href="https://github.com/bdmostafa" style={{ color: '#1CC7C1' }}>Mostafa</a> All Right Reserved.
             </div>

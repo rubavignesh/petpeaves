@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './NavBar/NavBar';
+// import Navbar from './NavBar/NavBar';
 import './Header.css';
 import Banner from './Banner/Banner';
 import { useLocation } from 'react-router-dom';
@@ -10,7 +10,7 @@ const Header = ({ selectedDate, handleAppointmentDate }) => {
 
     return (
         <div className={ path === '/appointment' ? 'header-appointment' : 'header-home'}>
-            <Navbar />
+            {/* <Navbar /> */}
             <Banner selectedDate={selectedDate} handleAppointmentDate={handleAppointmentDate} />
         </div>
     );
